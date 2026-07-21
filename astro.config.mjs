@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
@@ -9,11 +8,8 @@ export default defineConfig({
     process.env.SITE_URL ||
     'https://blog.rutesokin.monster',
 
-integrations: [
-    sitemap({
-      filter: (page) =>
-        !page.includes('/product/search/')
-    })
+  integrations: [
+    sitemap()
   ],
 
   markdown: {
