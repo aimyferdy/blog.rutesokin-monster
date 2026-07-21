@@ -3,7 +3,8 @@ export const SITE = {
 
   title: "AI Mr Ferdy | Website Resmi Platform AI Indonesia",
 
-  description: "Website resmi AI Mr Ferdy. Akses platform AI Indonesia untuk produktivitas digital, pembuatan konten, dan solusi otomatisasi modern.",
+  description:
+    "Website resmi AI Mr Ferdy. Akses platform AI Indonesia untuk produktivitas digital, pembuatan konten, dan solusi otomatisasi modern.",
 
   author: "AI Mr Ferdy",
 
@@ -16,24 +17,15 @@ export const SITE = {
   baseUrl: import.meta.env.SITE,
 
   url(path = "") {
-    return `${this.baseUrl}/${path}`
-      .replace(/([^:]\/)\/+/g, "$1");
+    return `${this.baseUrl}/${path}`.replace(/([^:]\/)\/+/g, "$1");
   },
 
-  product(slug = "") {
-  return this.url(`product/${slug}`);
-},
-
-tools(slug = "") {
-  return this.url(`tools/${slug}`);
-},
-
   blog(slug = "") {
-    return this.url(`blog/${slug}`);
+    return this.url(slug);
   },
 
   blogAmp(slug = "") {
-    return this.url(`blog/${slug}/amp`);
+    return this.url(`${slug}/amp`);
   },
 
   category(slug = "") {
@@ -51,22 +43,20 @@ tools(slug = "") {
   menu: [
     {
       name: "SEO",
-      url: "/blog/seo"
+      url: "/seo",
     },
-
     {
       name: "AI",
-      url: "/blog/ai"
+      url: "/ai",
     },
-
     {
       name: "Crypto",
-      url: "/blog/crypto"
-    }
+      url: "/crypto",
+    },
   ],
 
   social: {
     twitter: "@ai_mr_ferdy",
-    github: "https://github.com/aimrferdy"
-  }
+    github: "https://github.com/aimrferdy",
+  },
 };
