@@ -2,11 +2,7 @@
 import { SITE } from "../lib/site";
 import { getFooterData } from "../lib/footer-data";
 
-const {
-  latestPosts,
-  popularTools,
-  featuredProducts
-} = await getFooterData();
+const { latestPosts } = await getFooterData();
 ---
 
 <footer class="footer">
